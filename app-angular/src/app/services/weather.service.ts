@@ -28,8 +28,8 @@ export class WeatherService {
       );
   }
 
-  getWeatherByTemperature(temperatureC: number): Observable<Weather> {
-    return this.httpClient.get<Weather>(this.url + `/${temperatureC}`)
+  getWeatherByTemperature(temperature: number): Observable<Weather> {
+    return this.httpClient.get<Weather>(this.url + `/${temperature}`)
       .pipe(
         retry(2),
         catchError(this.handleError)
