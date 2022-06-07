@@ -1,0 +1,30 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Gerenciamento de temperaturas</li>
+  </ol>
+</nav>
+<div class="container">
+  <div class="card list-car">
+    <h5 class="card-header">Lista de temperaturas</h5>
+    <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Temperatura C</th>
+              <th scope="col">Temperatura F</th>
+              <th scope="col">Resumo</th>              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let weather of weathers">
+              <td>{{weather.dateTime}}</td>
+              <td>{{weather.temperatureC}}</td>
+              <td>{{weather.temperatureF}}</td>
+              <td>{{weather.summary}}</td>              
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
